@@ -142,23 +142,11 @@ const updatePassword = asyncHandler(async (req, res) => {
 		.json(new ApiResponse(200, {}, "Password updated successfully"));
 });
 
-const sendRequest = asyncHandler(async (req, res) => {});
-
-const acceptRequest = asyncHandler(async (req, res) => {});
-
-const sendMessage = asyncHandler(async (req, res) => {});
-
-const deleteMessage = asyncHandler(async (req, res) => {});
-
 export {
 	register,
 	login,
 	logout,
 	updateProfile,
 	updatePassword,
-	sendMessage,
-	sendRequest,
-	acceptRequest,
-	deleteMessage,
 	deleteAccount,
 };

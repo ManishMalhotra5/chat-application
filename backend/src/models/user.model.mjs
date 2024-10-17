@@ -47,6 +47,14 @@ const userSchema = new mongoose.Schema(
 				ref: Message,
 			},
 		],
+		requests : [
+			{
+				username:{
+					type : String,
+					required : true
+				}
+			}
+		]
 	},
 	{
 		timestamps: true,
