@@ -12,9 +12,7 @@ const sendRequest = async (socket, username) => {
             throw new ApiError(404, "User not found");
         }
         const reqAlreadyExist = targetUser.requests.some(
-            (req) => {
-                req.username === socket.user.username
-            }
+            (req) => req.username === socket.user.username
         )
         if (!reqAlreadyExist && !targetUser.friends.some((frnd) => frnd.username === socket.user.username)) {
             targetUser.requests.push({
